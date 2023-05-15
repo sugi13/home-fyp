@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Home</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- clock widget start -->
+    <script type="text/javascript"> var css_file=document.createElement("link"); css_file.setAttribute("rel","stylesheet"); css_file.setAttribute("type","text/css"); css_file.setAttribute("href","https://s.bookcdn.com//css/cl/bw-cl-c22.css?v=0.0.1"); document.getElementsByTagName("head")[0].appendChild(css_file); </script> 
+
+</head>
+<body>
+    <div id="bg-img">
+        <img src="design.png" alt="" style="width: 100vw; height: 100vh;opacity: 25%;">
+    </div>
+<div class="container">
+    <div class="container-1">
+        <h1>Smart Home 🏠</h1>
+        <div style="width: 60%;">
+            <a class="weatherwidget-io" href="https://forecast7.com/en/10d9676d90/pachapalayam/" data-label_1="PACHAPALAYAM" data-label_2="WEATHER" data-font="Open Sans" data-icons="Climacons" data-mode="Current" data-days="3" data-theme="original" data-cloudfill="#808080" ></a>
+        </div>
+        <div id="tw_22_1563403050">
+            <div style="width:200px; height:px; margin: 0 auto;"><a href="https://booked.net/time/delhi-national-capital-territory-of-india-46748">Delhi (National Capital Territory of India)</a><br/></div>
+         </div>
+    </div>
+    <div class="container-2">
+        <div class="buttons">
+            <div class="button-1" value="light">
+                <img src="https://img.icons8.com/?size=1x&id=XiSh2trls5sb&format=png" alt="light">
+                <p>light</p>
+                <div class="toggle-btn">
+                    <a href="https://api.thingspeak.com/update?api_key=XQSXS3DMWHIE0NWG&field5=1" target="_blank">
+                        <button class="button" value = "on" onclick="check(event)">on</button>
+                    </a>
+                      <a href="https://api.thingspeak.com/update?api_key=XQSXS3DMWHIE0NWG&field5=0">
+                        <button class="button" value = "off" onclick="check(event)">off</button>
+                      </a>
+                </div>
+
+            </div>
+            <div class="button-2">
+                <img src="https://img.icons8.com/?size=1x&id=ypRUIdRBkFFc&format=png" alt="LED">
+                <p>LED</p>
+                <div class="toggle-btn">
+                    <a href="https://api.thingspeak.com/update?api_key=XQSXS3DMWHIE0NWG&field6=1">
+                      <button class="button"  value ="on" onclick="check(event)">on</button>
+                    </a>
+                    <a href="https://api.thingspeak.com/update?api_key=XQSXS3DMWHIE0NWG&field6=0">
+                        <button class="button"  value ="off" onclick="check(event)">off</button>
+                    </a>
+                </div>
+
+            </div>
+            <div class="button-3">
+                <img src="https://img.icons8.com/?size=1x&id=K09rMyDmxnfs&format=png" alt="motor">
+                <p>Motor</p>
+                <div class="toggle-btn">
+                    <a href="https://api.thingspeak.com/update?api_key=XQSXS3DMWHIE0NWG&field7=1">
+                        <button class="button"  value ="on" onclick="check(event)">on</button>
+                      </a>
+                      <a href="https://api.thingspeak.com/update?api_key=XQSXS3DMWHIE0NWG&field7=0">
+                        <button class="button"  value ="off" onclick="check(event)">off</button>
+                      </a>
+                </div>
+            </div>
+            <div class="button-4">
+                <img src="https://img.icons8.com/?size=1x&id=ehDsuflHffkO&format=png" alt="pump">
+                <p>Pump</p>
+                <div class="toggle-btn">
+                    <a href="https://api.thingspeak.com/update?api_key=XQSXS3DMWHIE0NWG&field8=1">
+                        <button class="button"  value ="on" onclick="check(event)">on</button>
+                      </a>
+                      <a href="https://api.thingspeak.com/update?api_key=XQSXS3DMWHIE0NWG&field8=0">
+                        <button class="button"  value ="off" onclick="check(event)">off</button>
+                      </a>
+                </div>
+
+            </div>
+            <div class="button-5">
+                <img src="https://img.icons8.com/?size=1x&id=12132&format=png" alt="fan">
+                <p>fan</p>
+                <div class="toggle-btn">
+                    <a href="https://api.thingspeak.com/update?api_key=XQSXS3DMWHIE0NWG&field9=1">
+                        <button class="button"  value ="on" onclick="check(event)">on</button>
+                    </a>
+                    <a href="https://api.thingspeak.com/update?api_key=XQSXS3DMWHIE0NWG&field9=0">
+                        <button class="button"  value ="off" onclick="check(event)">off</button>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        <div class="data-collection">
+            <h1>Dashboard</h1>
+            <div class="iframe">
+                <iframe  style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2079057/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=PIR&type=line"></iframe>
+                <iframe  style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2079057/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=FIRE&type=line"></iframe>
+                <iframe  style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2079057/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=GAS&type=line"></iframe>
+                <iframe  style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2079057/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=WATER&type=line"></iframe>
+            </div>
+            </div>  
+            <div class="download" class="toggle-btn">
+                <a href="https://thingspeak.com/channels/2079057/feed.csv">
+                  <!-- <img src="https://img.icons8.com/?size=512&id=Cf2AQfoprtFA&format=png" alt="Download" height="40px" width="40px"> -->
+                  <!-- <img src="https://img.icons8.com/3d-fluency/94/null/download-from-cloud.png"/> -->
+                  <img src="https://img.icons8.com/3d-fluency/50/null/download-from-cloud.png"/>
+                    <button class="button">Download Recent Data</button></a>
+                </a>
+
+                <a href="https://thingspeak.com/channels/2079057/private_show">
+                    <img src="https://img.icons8.com/arcade/64/null/details-pane.png"/ style="size: 1;">
+                    <button class="button">view Details</button>
+                </a>
+            </div>
+    </div>
+    </div>
+</div>
+<script>
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+    </script>
+        <script type="text/script">
+            const video = document.createElement("video");
+            console.log(video.currentTime);
+    
+</script>
+ 
+<script>
+    function check(event){
+    let value = event.target.value;
+    if(value === 'on'){
+        alert('turning on')
+    }
+    else{
+        alert('turning off')
+    }
+    }
+</script>
+
+
+<script type="text/javascript"> function setWidgetData_1563403050(data){ if(typeof(data) != 'undefined' && data.results.length > 0) { for(var i = 0; i < data.results.length; ++i) { var objMainBlock = ''; var params = data.results[i]; objMainBlock = document.getElementById('tw_'+params.widget_type+'_'+params.widget_id); if(objMainBlock !== null) objMainBlock.innerHTML = params.html_code; } } } var clock_timer_1563403050 = -1; widgetSrc = "https://widgets.booked.net/time/info?ver=2;domid=209;type=22;id=1563403050;scode=45891;city_id=46748;wlangid=1;mode=1;details=0;background=ffffff;border_color=ffffff;color=686868;add_background=ffffff;add_color=333333;head_color=ffffff;border=0;transparent=0;"; var widgetUrl = location.href; widgetSrc += '&ref=' + widgetUrl; var wstrackId = ""; if (wstrackId) { widgetSrc += ';wstrackId=' + wstrackId + ';' } var timeBookedScript = document.createElement("script"); timeBookedScript.setAttribute("type", "text/javascript"); timeBookedScript.src = widgetSrc; document.body.appendChild(timeBookedScript); </script>
+<!-- clock widget end -->
+</body>
+</html>
